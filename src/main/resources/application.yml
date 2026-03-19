@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: wallet-system
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///wallet_db
+    username: root
+    password: Vickypatil@12
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#		
+#		spring.application.name=wallet-system
+#
+#		spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#		spring.datasource.url=jdbc:mysql:///wallet_db
+#		spring.datasource.username=root
+#		spring.datasource.password=Vickypatil@12
+#
+#		spring.jpa.hibernate.ddl-auto=validate
+#		spring.jpa.show-sql=true
