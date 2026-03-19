@@ -1,4 +1,4 @@
-package com.vickee.dao;
+package com.vickee.wallet.dao;
 
 import lombok.Data;
 

@@ -3,8 +3,8 @@ package com.vickee.wallet.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.vickee.dao.LoginRequest;
-import com.vickee.dao.RegisterRequest;
+import com.vickee.wallet.dao.LoginRequest;
+import com.vickee.wallet.dao.RegisterRequest;
 import com.vickee.wallet.dto.LoginResponse;
 import com.vickee.wallet.dto.RegisterResponse;
 import com.vickee.wallet.entity.User;

@@ -1,4 +1,4 @@
-package com.vickee.dao;
+package com.vickee.wallet.dao;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;

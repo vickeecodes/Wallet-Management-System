@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vickee.dao.AddRequest;
-import com.vickee.dao.DeductRequest;
+import com.vickee.wallet.dao.AddRequest;
+import com.vickee.wallet.dao.DeductRequest;
 import com.vickee.wallet.dto.TransactionResponse;
 import com.vickee.wallet.repository.UserRepository;
 import com.vickee.wallet.service.UserService;
