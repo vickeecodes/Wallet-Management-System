@@ -1,8 +1,6 @@
 package com.vickee.wallet.service;
 
-import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -85,9 +83,7 @@ public class WalletService {
 
     public TransactionResponse getTransactions(Long walletId){
     	User user = userRepo.findById(walletId).orElseThrow(()-> new ResourceNotFoundException("User Not Found"));
-        Wallet wallet = walletRepository.findById(walletId)
-                .orElseThrow(() -> new ResourceNotFoundException("Wallet not found"));
-        List<Transaction> byWallet = transactionRepository.findByWallet(wallet);
-        return new TransactionResponse(walletId, user.getName(),byWallet);
+        List<Transaction> allTransaction = transactionRepository.findAll();
+        return new TransactionResponse(walletId, user.getName(),allTransaction);
     }
 }

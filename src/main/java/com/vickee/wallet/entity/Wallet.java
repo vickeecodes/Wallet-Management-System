@@ -1,7 +1,5 @@
 package com.vickee.wallet.entity;
 
-import java.math.BigDecimal;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +10,6 @@ import lombok.Data;
 
 @Entity
 @Data
-
 public class Wallet {
 
 	@Id
@@ -20,7 +17,6 @@ public class Wallet {
 	private Long id;
 	
 	private Double balance = 0.0;
-//	private BigDecimal balance = BigDecimal.ZERO;
 	
 	@OneToOne
 	@JoinColumn(name = "user_id")

@@ -12,11 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vickee.wallet.dao.AddRequest;
 import com.vickee.wallet.dao.DeductRequest;
 import com.vickee.wallet.dto.TransactionResponse;
-import com.vickee.wallet.repository.UserRepository;
-import com.vickee.wallet.service.UserService;
 import com.vickee.wallet.service.WalletService;
 
-// Swagger imports
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

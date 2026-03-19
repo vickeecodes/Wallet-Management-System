@@ -1,13 +1,9 @@
 package com.vickee.wallet.repository;
 
-import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.vickee.wallet.entity.User;
 import com.vickee.wallet.entity.Wallet;
 
 public interface WalletRepository extends JpaRepository<Wallet, Long>{
 
-	Optional<Wallet> findByUser(User user);
 }
