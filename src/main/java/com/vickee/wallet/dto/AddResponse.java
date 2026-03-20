@@ -1,10 +1,10 @@
 package com.vickee.wallet.dto;
 
-public class addResponse {
+public class AddResponse {
 	private String Massege;
 	private double amount;
 	
-	public addResponse(String Massege,double amount) {
+	public AddResponse(String Massege,double amount) {
 		this.Massege = Massege;
 		this.amount = amount;
 	}

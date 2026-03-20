@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.vickee.wallet.dto.DeductResponse;
 import com.vickee.wallet.dto.TransactionResponse;
-import com.vickee.wallet.dto.addResponse;
+import com.vickee.wallet.dto.AddResponse;
 import com.vickee.wallet.entity.Transaction;
 import com.vickee.wallet.entity.TransactionType;
 import com.vickee.wallet.entity.User;
@@ -34,7 +34,7 @@ public class WalletService {
     private UserRepository userRepo;
     
     @Transactional
-    public addResponse addBalance(Long walletId, Double amount) {
+    public AddResponse addBalance(Long walletId, Double amount) {
 
         Wallet wallet = walletRepository.findById(walletId)
                 .orElseThrow(() -> new ResourceNotFoundException("Wallet not found"));
@@ -53,7 +53,7 @@ public class WalletService {
         transactionRepository.save(txn);
         walletRepository.save(wallet);
         
-        return new addResponse("Amount Added", amount);
+        return new AddResponse("Amount Added", amount);
     }
 
     @Transactional

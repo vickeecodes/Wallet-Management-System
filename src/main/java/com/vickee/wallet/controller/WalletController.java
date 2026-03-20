@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vickee.wallet.dao.AddRequest;
 import com.vickee.wallet.dao.DeductRequest;
+import com.vickee.wallet.dto.AddResponse;
+import com.vickee.wallet.dto.DeductResponse;
 import com.vickee.wallet.dto.TransactionResponse;
 import com.vickee.wallet.service.WalletService;
 
@@ -28,7 +30,7 @@ public class WalletController {
     
     @Operation(summary = "Add balance to wallet")
     @PostMapping("/add")
-    public ResponseEntity<?> add(@RequestBody AddRequest request) {
+    public ResponseEntity<AddResponse> add(@RequestBody AddRequest request) {
         return ResponseEntity.ok(
                 walletService.addBalance(request.getWalletId(), request.getAmount())
         );
@@ -36,7 +38,7 @@ public class WalletController {
 
     @Operation(summary = "Deduct balance from wallet")
     @PostMapping("/deduct")
-    public ResponseEntity<?> deduct(@Valid @RequestBody DeductRequest request) {
+    public ResponseEntity<DeductResponse> deduct(@Valid @RequestBody DeductRequest request) {
         return ResponseEntity.ok(
                 walletService.deductBalance(request.getWalletId(), request.getAmount())
         );
