@@ -1,17 +1,16 @@
-spring:
-  application:
-    name: wallet-system
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql:///wallet_db
-    username: root
-    password: Vickypatil@12
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+#spring:
+#  application:
+#    name: wallet-system
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql:///wallet_db
+#    username: root
+#    password: Vickypatil@12
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
 
-#		
 #		spring.application.name=wallet-system
 #
 #		spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -21,3 +20,22 @@ spring:
 #
 #		spring.jpa.hibernate.ddl-auto=validate
 #		spring.jpa.show-sql=true
+
+
+spring:
+  application:
+    name: wallet-system
+
+  datasource:
+    url: jdbc:postgresql://dpg-d7799dtm5p6s73adkj40-a.ohio-postgres.render.com:5432/wallet_db_1a8s
+    username: wallet_user
+    password:  DQ86c2NPWwtCTpV4QG7slkK1i0agQqDx
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: ${PORT:8080}
